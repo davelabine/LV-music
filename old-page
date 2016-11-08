@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<iframe name="full" style="width:100%;height:520px;border:0px;" src="//widget.cdbaby.com/fac76bb8-c685-4120-acdc-9e0a688fa20b/full/light/opaque"></iframe>
+<script>
+
+</script>
+</body>
+</html>
+
+<!--
+
+// Tried to override the buttons of the CD Baby widget, but XSS prevents me from doing this!
+$(document).ready(function(){
+  var iFrame = $('iframe');
+  var src= $(iFrame).attr('src');
+  console.log("src: " + src + "\n");
+  if (src.indexOf("widget.cdbaby.com") !== -1) {
+     console.log("Confirmed CD Baby iFrame");
+     var html = iFrame.contentWindow
+     console.log(html);
+     
+     $('span', iFrame.contents()).each(function (index, value){
+         var c = $(this).attr('class');
+         console.log("span class: " + c);
+     });
+  }
+});
+
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/165680638&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true&amp;download=true"></iframe>
+-->
