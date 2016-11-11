@@ -82,6 +82,9 @@
   </a>
 </span>  
 </p>
+<p>
+.
+</p>
 <script>
   window.mobileAndTabletcheck = function() {
   var check = false;
@@ -91,6 +94,10 @@
   
   if (window.mobileAndTabletcheck()) {
     $('span.free-download-button').hide();
+    $('img.g-play').css("height", 75);
+    $('span.g-play').css("height", 75);
+    $('img.itunes').css("height", 75);
+    $('span.itunes').css("height", 75);
   }
 </script>  
 </body>
